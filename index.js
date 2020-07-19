@@ -22,7 +22,6 @@ const shortenURL = async (longLink) => {
     const shortLinkData = await response.json();
     const shortLink = shortLinkData.link;
     clipboardy.writeSync(shortLink);
-
   } catch (error) {
     console.error(error);
   }
