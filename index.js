@@ -1,10 +1,13 @@
 const fs = require("fs");
 
-const args = process.argv.slice(2);
+
 const dotenv = require("dotenv");
 
-dotenv.config();
+
 const fetch = require("node-fetch");
+
+dotenv.config();
+const args = process.argv.slice(2);
 
 const targetLink = "https://lukec.me";
 
@@ -29,8 +32,8 @@ const shortenURL = async (longLink) => {
   }
 };
 
-const getShortURL = async (targetLink) => {
-  const shortLink = await shortenURL(targetLink);
+const getShortURL = async (link) => {
+  const shortLink = await shortenURL(link);
   console.log(shortLink);
 };
 
