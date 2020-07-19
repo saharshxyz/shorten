@@ -3,7 +3,7 @@
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": [
-      "warn",
+      "off",
       {
         "trailingComma": "es5",
         "tabWidth": 2,
@@ -13,7 +13,7 @@
       }
     ],
     "no-unused-vars": "warn",
-    "no-console": "warn",
+    "no-console": "off",
     "func-names": "off",
     "class-methods-use-this": "warn",
     "import/no-extraneous-dependencies": "warn"
