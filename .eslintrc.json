@@ -1,0 +1,34 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "warn",
+      {
+        "trailingComma": "es5",
+        "tabWidth": "2",
+        "semi": "true",
+        "singleQuote": "true",
+        "arrowParens": "always"
+      }
+    ],
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "func-names": "off",
+    "class-methods-use-this": "warn",
+    "import/no-extraneous-dependencies": "warn"
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "ignorePatterns": [
+    ".DS_Store",
+    "node_modules/",
+    "dist/",
+    ".cache/",
+    ".env*",
+    ".eslintcache",
+    "webpack**",
+    ".github/workflows/lint.yml"
+  ]
+}

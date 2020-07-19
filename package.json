@@ -1,0 +1,37 @@
+{
+  "name": "shorten-url",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saharshy29/shorten-url.git"
+  },
+  "author": "Saharsh Yeruva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saharshy29/shorten-url/issues"
+  },
+  "homepage": "https://github.com/saharshy29/shorten-url#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "fetch": "^1.1.0",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "prettier": "^2.0.5"
+  }
+}
