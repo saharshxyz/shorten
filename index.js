@@ -1,9 +1,6 @@
 const fs = require("fs");
-
 const dotenv = require("dotenv");
-
 const fetch = require("node-fetch");
-
 dotenv.config();
 const args = process.argv.slice(2);
 
