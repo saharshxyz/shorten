@@ -1,10 +1,8 @@
-const fs = require("fs");
 const dotenv = require("dotenv");
 const fetch = require("node-fetch");
 const clipboardy = require("clipboardy");
 
 dotenv.config();
-const args = process.argv.slice(2);
 
 const shortenURL = async (longLink) => {
   try {
