@@ -1,7 +1,6 @@
 const dotenv = require("dotenv");
 const fetch = require("node-fetch");
 const clipboardy = require("clipboardy");
-
 dotenv.config();
 
 const shortenURL = async (longLink) => {
@@ -18,17 +17,15 @@ const shortenURL = async (longLink) => {
         "X-API-KEY": process.env.KEY,
       },
     });
-    const shortLink = await response.json();
-    return shortLink;
+
+    const shortLinkData = await response.json();
+    const shortLink = shortLinkData.link;
+    clipboardy.writeSync(shortLink);
+
   } catch (error) {
     console.error(error);
   }
 };
 
-const getShortURL = async (link) => {
-  const shortLink = await shortenURL(link);
-  console.log(shortLink);
-};
-
 const targetLink = clipboardy.readSync();
-getShortURL(targetLink);
+shortenURL(targetLink);
