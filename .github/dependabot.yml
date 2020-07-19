@@ -7,7 +7,7 @@ updates:
     assignees:
       - "saharshy29"
     open-pull-requests-limit: 10
-    rebase-strategy: "off"
+    rebase-strategy: "disabled"
     commit-message:
       prefix: "⬆️dependabot:"
     schedule:
@@ -19,7 +19,7 @@ updates:
     assignees:
       - "saharshy29"
     open-pull-requests-limit: 10
-    rebase-strategy: "off"
+    rebase-strategy: "disabled"
     commit-message:
       prefix: "⬆️dependabot:"
     schedule:
