@@ -16,7 +16,8 @@
     "no-console": "off",
     "func-names": "off",
     "class-methods-use-this": "warn",
-    "import/no-extraneous-dependencies": "warn"
+    "import/no-extraneous-dependencies": "warn",
+    "consistent-return": "warn"
   },
   "parserOptions": {
     "sourceType": "module"
