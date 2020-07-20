@@ -34,7 +34,9 @@ const shortenURL = async (longLink) => {
 const run = (longLink) => {
   const startsWIthHTTP = /^http/;
   if (startsWIthHTTP.exec(longLink) !== null) {
-    const notification = `display notification "${longLink}" with title "Link Shortened" subtitle "${shortenURL(longLink)}" sound name "purr"`;
+    const notification = `display notification "${longLink}" with title "Link Shortened" subtitle "${shortenURL(
+      longLink
+    )}" sound name "purr"`;
     applescript.execString(notification);
   } else {
     const notification = `display notification "${longLink}" with title "Invalid Link" subtitle "Make sure link has http or https" sound name "glass"`;
