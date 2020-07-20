@@ -25,7 +25,7 @@ const shortenURL = async (longLink) => {
     const findHTTP = /(?<http>http)/;
     if (findHTTP.exec(shortLink) !== null) {
       const HTTPS = "https";
-shortLink = shortLink.replace(findHTTP, HTTPS);
+      shortLink = shortLink.replace(findHTTP, HTTPS);
     }
 
     clipboardy.writeSync(shortLink);
