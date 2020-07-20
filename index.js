@@ -31,10 +31,10 @@ const shortenURL = async (longLink) => {
   }
 };
 
-const run = (longLink) => {
+const run = async (longLink) => {
   const startsWIthHTTP = /^http/;
   if (startsWIthHTTP.exec(longLink) !== null) {
-    const notification = `display notification "${longLink}" with title "Link Shortened" subtitle "${shortenURL(
+    const notification = `display notification "${longLink}" with title "Link Shortened" subtitle "${await shortenURL(
       longLink
     )}" sound name "purr"`;
     applescript.execString(notification);

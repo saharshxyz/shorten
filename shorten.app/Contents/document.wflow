@@ -56,6 +56,8 @@
 				<string>/System/Library/Automator/Run Shell Script.action</string>
 				<key>ActionName</key>
 				<string>Run Shell Script</string>
+				<key>ActionNameComment</key>
+				<string>Execute Node Script</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
@@ -84,7 +86,7 @@
 				<key>Class Name</key>
 				<string>RunShellScriptAction</string>
 				<key>InputUUID</key>
-				<string>0B0A4597-056F-4F13-A80C-73045575B549</string>
+				<string>0F203449-94DE-4D80-9E19-7841E6B82969</string>
 				<key>Keywords</key>
 				<array>
 					<string>Shell</string>
@@ -94,9 +96,9 @@
 					<string>Unix</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>02DEE96C-9F25-4C5F-9986-373F1F15B844</string>
+				<string>85CB35BD-0DED-4135-8342-705FBAB19673</string>
 				<key>UUID</key>
-				<string>4DF2450D-3BA3-484F-B94F-FF3E857B056A</string>
+				<string>01D4417B-B1D0-4B14-801A-382687E189A7</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
@@ -169,6 +171,8 @@
 						<string>4</string>
 					</dict>
 				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
@@ -182,19 +186,6 @@
 	</array>
 	<key>connectors</key>
 	<dict/>
-	<key>variables</key>
-	<array>
-		<dict>
-			<key>UUID</key>
-			<string>5A98951F-9CA1-49F0-8A99-B5F552A313CB</string>
-			<key>identifier</key>
-			<string>com.apple.Automator.Variable.AppleScript</string>
-			<key>name</key>
-			<string>AppleScript</string>
-			<key>value</key>
-			<string>"Text"</string>
-		</dict>
-	</array>
 	<key>workflowMetaData</key>
 	<dict>
 		<key>workflowTypeIdentifier</key>
