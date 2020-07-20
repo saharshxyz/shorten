@@ -36,7 +36,7 @@ const run = (longLink) => {
   } else {
     clipboardy.writeSync("Not a valid link. Make sure it has http or https.");
   }
-}
+};
 
 const targetLink = clipboardy.readSync();
 run(targetLink);
