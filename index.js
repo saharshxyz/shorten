@@ -1,6 +1,7 @@
 const dotenv = require("dotenv");
 const fetch = require("node-fetch");
 const clipboardy = require("clipboardy");
+const applescript = require("applescript");
 
 dotenv.config();
 
@@ -24,17 +25,20 @@ const shortenURL = async (longLink) => {
 
     shortLink = shortLink.replace(/http/, "https");
     clipboardy.writeSync(shortLink);
+    return shortLink;
   } catch (error) {
     console.error(error);
   }
 };
 
 const run = (longLink) => {
-  const startsWIthHTTP = /^http/m;
+  const startsWIthHTTP = /^http/;
   if (startsWIthHTTP.exec(longLink) !== null) {
-    shortenURL(longLink);
+    const notification = `display notification "${longLink}" with title "Link Shortened" subtitle "${shortenURL(longLink)}" sound name "purr"`;
+    applescript.execString(notification);
   } else {
-    clipboardy.writeSync("Not a valid link. Make sure it has http or https.");
+    const notification = `display notification "${longLink}" with title "Invalid Link" subtitle "Make sure link has http or https" sound name "glass"`;
+    applescript.execString(notification);
   }
 };
 

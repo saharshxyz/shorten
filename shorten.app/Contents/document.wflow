@@ -21,17 +21,25 @@
 					<true/>
 					<key>Types</key>
 					<array>
-						<string>com.apple.applescript.object</string>
+						<string>com.apple.cocoa.string</string>
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>1.0.2</string>
+				<string>2.0.3</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Automator</string>
 				</array>
 				<key>AMParameterProperties</key>
 				<dict>
+					<key>COMMAND_STRING</key>
+					<dict/>
+					<key>CheckedForUserDefaultShell</key>
+					<dict/>
+					<key>inputMethod</key>
+					<dict/>
+					<key>shell</key>
+					<dict/>
 					<key>source</key>
 					<dict/>
 				</dict>
@@ -41,22 +49,30 @@
 					<string>List</string>
 					<key>Types</key>
 					<array>
-						<string>com.apple.applescript.object</string>
+						<string>com.apple.cocoa.string</string>
 					</array>
 				</dict>
 				<key>ActionBundlePath</key>
-				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<string>/System/Library/Automator/Run Shell Script.action</string>
 				<key>ActionName</key>
-				<string>Run AppleScript</string>
+				<string>Run Shell Script</string>
 				<key>ActionParameters</key>
 				<dict>
+					<key>COMMAND_STRING</key>
+					<string>cd ~/Documents/Code/shorten-url &amp;&amp; /usr/local/bin/node index.js</string>
+					<key>CheckedForUserDefaultShell</key>
+					<true/>
+					<key>inputMethod</key>
+					<integer>0</integer>
+					<key>shell</key>
+					<string>/bin/zsh</string>
 					<key>source</key>
-					<string>set longLink to (the clipboard as text)do shell script "cd ~/Documents/Code/shorten-url &amp;&amp; /usr/local/bin/node index.js"set shortLink to (the clipboard as text)if shortLink is ("Not a valid link. Make sure it has http or https.") then	display notification longLink with title "Invalid Link" subtitle "Not a valid link. Make sure it has http or https." sound name "purr"else	display notification longLink with title "Link Shortened" subtitle shortLink sound name "purr"end if</string>
+					<string></string>
 				</dict>
 				<key>BundleIdentifier</key>
-				<string>com.apple.Automator.RunScript</string>
+				<string>com.apple.RunShellScript</string>
 				<key>CFBundleVersion</key>
-				<string>1.0.2</string>
+				<string>2.0.3</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -66,17 +82,21 @@
 					<string>AMCategoryUtilities</string>
 				</array>
 				<key>Class Name</key>
-				<string>RunScriptAction</string>
+				<string>RunShellScriptAction</string>
 				<key>InputUUID</key>
-				<string>F74B1CFC-81DF-4689-98E1-7141C62D4F15</string>
+				<string>0B0A4597-056F-4F13-A80C-73045575B549</string>
 				<key>Keywords</key>
 				<array>
+					<string>Shell</string>
+					<string>Script</string>
+					<string>Command</string>
 					<string>Run</string>
+					<string>Unix</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>FC4F4C54-C791-4F9C-BE48-CCAA09895B38</string>
+				<string>02DEE96C-9F25-4C5F-9986-373F1F15B844</string>
 				<key>UUID</key>
-				<string>BF2EC0AF-5C97-43B1-8F7E-48DC57B26387</string>
+				<string>4DF2450D-3BA3-484F-B94F-FF3E857B056A</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
@@ -86,14 +106,9 @@
 					<key>0</key>
 					<dict>
 						<key>default value</key>
-						<string>on run {input, parameters}
-	
-	(* Your script goes here *)
-	
-	return input
-end run</string>
+						<integer>0</integer>
 						<key>name</key>
-						<string>source</string>
+						<string>inputMethod</string>
 						<key>required</key>
 						<string>0</string>
 						<key>type</key>
@@ -101,13 +116,65 @@ end run</string>
 						<key>uuid</key>
 						<string>0</string>
 					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<false/>
+						<key>name</key>
+						<string>CheckedForUserDefaultShell</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>2</string>
+					</dict>
+					<key>3</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>COMMAND_STRING</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>3</string>
+					</dict>
+					<key>4</key>
+					<dict>
+						<key>default value</key>
+						<string>/bin/sh</string>
+						<key>name</key>
+						<string>shell</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>4</string>
+					</dict>
 				</dict>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>309.000000:315.000000</string>
+				<string>265.500000:252.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
+				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
