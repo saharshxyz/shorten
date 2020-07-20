@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/saharshy29/shorten-url#readme",
   "dependencies": {
+    "applescript": "^1.0.0",
     "clipboardy": "^2.3.0",
     "dotenv": "^8.2.0",
     "fetch": "^1.1.0",
