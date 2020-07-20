@@ -59,7 +59,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>cd ~/Documents/Code/shorten-url &amp;&amp; /usr/local/bin/node index.js</string>
+					<string>cd ~/Documents/Code/shorten-url &amp;&amp; osascript shorten.scpt</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -84,7 +84,7 @@
 				<key>Class Name</key>
 				<string>RunShellScriptAction</string>
 				<key>InputUUID</key>
-				<string>E0A60A43-C0B8-4E7F-BE4E-4DE814164D08</string>
+				<string>EB8605C0-47FB-418D-9BCD-A587C8FCFBCD</string>
 				<key>Keywords</key>
 				<array>
 					<string>Shell</string>
@@ -94,9 +94,9 @@
 					<string>Unix</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>586C96F4-8F7C-4C4B-9DEB-382FC0A21B57</string>
+				<string>FA188D6D-59D6-4CBA-A205-A97DF2149F8A</string>
 				<key>UUID</key>
-				<string>9FDE9EDD-502F-4027-8278-B5612E12B735</string>
+				<string>BA6176D9-D1CD-4584-93D6-A8D470045073</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
@@ -184,6 +184,19 @@
 	</array>
 	<key>connectors</key>
 	<dict/>
+	<key>variables</key>
+	<array>
+		<dict>
+			<key>UUID</key>
+			<string>5A98951F-9CA1-49F0-8A99-B5F552A313CB</string>
+			<key>identifier</key>
+			<string>com.apple.Automator.Variable.AppleScript</string>
+			<key>name</key>
+			<string>AppleScript</string>
+			<key>value</key>
+			<string>"Text"</string>
+		</dict>
+	</array>
 	<key>workflowMetaData</key>
 	<dict>
 		<key>workflowTypeIdentifier</key>
