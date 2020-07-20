@@ -1,0 +1,1 @@
+cd ~/Documents/Code/shorten-url && /usr/local/bin/node index.js
