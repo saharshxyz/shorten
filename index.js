@@ -23,7 +23,7 @@ const shortenURL = async (longLink) => {
     let shortLink = shortLinkData.link;
 
     if (shortLink.includes("http", 0)) {
-      shortLink = shortLink.replace(/(?<http>http)/, "https");
+      shortLink = shortLink.replace(/http/, "https");
     }
 
     clipboardy.writeSync(shortLink);
@@ -33,4 +33,9 @@ const shortenURL = async (longLink) => {
 };
 
 const targetLink = clipboardy.readSync();
-shortenURL(targetLink);
+
+if (targetLink.includes("http", 0) || targetLink.includes("https", 0)) {
+  shortenURL(targetLink);
+} else {
+  clipboardy.writeSync("Not a valid link. Make sure it has http or https.");
+}
