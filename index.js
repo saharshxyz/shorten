@@ -5,10 +5,9 @@ const applescript = require("applescript");
 
 dotenv.config();
 
-
 const replaceHTTP = (withHTTP) => {
   withHTTP.replace(/http/, "https");
-}
+};
 
 const shortenURL = async (longLink) => {
   try {
@@ -27,7 +26,6 @@ const shortenURL = async (longLink) => {
 
     const shortLinkData = await response.json();
 
-    
     clipboardy.writeSync(shortLink);
     return replaceHTTP(shortLinkData.link);
   } catch (error) {
@@ -35,10 +33,8 @@ const shortenURL = async (longLink) => {
   }
 };
 
-
 const run = async (longLink) => {
-  const startsWIthHTTP = /^http/;
-  if (startsWIthHTTP.exec(longLink) !== null) {
+  if (longLink.match(/^http/)) {
     const notification = `display notification "${longLink}" with title "Link Shortened" subtitle "${await shortenURL(
       longLink
     )}" sound name "purr"`;
