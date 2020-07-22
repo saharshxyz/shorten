@@ -58,11 +58,10 @@ const whatDomain = async(longLink) => {
   {
     const shortLink = await shortenScreenshot(longLink);
     return shortLink;
-  } else 
-  {
+  } 
     const shortLink = await shortenNormal(longLink);
     return shortLink;
-  }
+  
 }
 
 const shortenURL = async (longLink) => {
