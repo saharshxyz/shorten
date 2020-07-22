@@ -5,6 +5,11 @@ const applescript = require("applescript");
 
 dotenv.config();
 
+
+const replaceHTTP = (withHTTP) => {
+  withHTTP.replace(/http/, "https");
+}
+
 const shortenURL = async (longLink) => {
   try {
     const response = await fetch(`https://kutt.it/api/v2/links`, {
@@ -21,15 +26,15 @@ const shortenURL = async (longLink) => {
     });
 
     const shortLinkData = await response.json();
-    let shortLink = shortLinkData.link;
 
-    shortLink = shortLink.replace(/http/, "https");
+    
     clipboardy.writeSync(shortLink);
-    return shortLink;
+    return replaceHTTP(shortLinkData.link);
   } catch (error) {
     console.error(error);
   }
 };
+
 
 const run = async (longLink) => {
   const startsWIthHTTP = /^http/;
