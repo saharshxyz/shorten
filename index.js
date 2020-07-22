@@ -31,9 +31,42 @@ const shortenNormal = async (longLink) => {
   }
 };
 
-const shortenURL = async (longLink) => {
-  const shortLink = await shortenNormal(longLink);
+const shortenScreenshot = async (longLink) => {
+  try {
+    const response = await fetch(`https://kutt.it/api/v2/links`, {
+      method: "POST",
+      body: JSON.stringify({
+        target: longLink,
+        reuse: true,
+        domain: "https://sc.srsh.link/",
+      }),
+      headers: {
+        "content-type": "application/json",
+        "X-API-KEY": process.env.KEY_SC,
+      },
+    });
 
+    const shortLinkData = await response.json();
+    return shortLinkData.link;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const whatDomain = async(longLink) => {
+  if (longLink.match(/^https:\/\/cln.sh\//)) 
+  {
+    const shortLink = await shortenScreenshot(longLink);
+    return shortLink;
+  } else 
+  {
+    const shortLink = await shortenNormal(longLink);
+    return shortLink;
+  }
+}
+
+const shortenURL = async (longLink) => {
+  const shortLink = await whatDomain(longLink)
   replaceHTTP(shortLink);
   clipboardy.writeSync(shortLink);
   return shortLink;
