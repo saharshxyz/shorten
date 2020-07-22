@@ -29,14 +29,14 @@ const shortenNormal = async (longLink) => {
   } catch (error) {
     console.error(error);
   }
-}
+};
 
 const shortenURL = async (longLink) => {
   const shortLink = await shortenNormal(longLink);
 
   replaceHTTP(shortLink);
   clipboardy.writeSync(shortLink);
-  return shortLink
+  return shortLink;
 };
 
 const run = async (longLink) => {
