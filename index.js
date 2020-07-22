@@ -5,10 +5,9 @@ const applescript = require("applescript");
 
 dotenv.config();
 
-
 const replaceHTTP = (withHTTP) => {
   withHTTP.replace(/http/, "https");
-}
+};
 
 const shortenURL = async (longLink) => {
   try {
@@ -27,14 +26,12 @@ const shortenURL = async (longLink) => {
 
     const shortLinkData = await response.json();
 
-    
     clipboardy.writeSync(shortLink);
     return replaceHTTP(shortLinkData.link);
   } catch (error) {
     console.error(error);
   }
 };
-
 
 const run = async (longLink) => {
   if (longLink.match(/^http/)) {
