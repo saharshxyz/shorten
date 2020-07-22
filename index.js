@@ -37,8 +37,7 @@ const shortenURL = async (longLink) => {
 
 
 const run = async (longLink) => {
-  const startsWIthHTTP = /^http/;
-  if (startsWIthHTTP.exec(longLink) !== null) {
+  if (longLink.match(/^http/)) {
     const notification = `display notification "${longLink}" with title "Link Shortened" subtitle "${await shortenURL(
       longLink
     )}" sound name "purr"`;
