@@ -53,19 +53,17 @@ const shortenScreenshot = async (longLink) => {
   }
 };
 
-const whatDomain = async(longLink) => {
-  if (longLink.match(/^https:\/\/cln.sh\//)) 
-  {
+const whatDomain = async (longLink) => {
+  if (longLink.match(/^https:\/\/cln.sh\//)) {
     const shortLink = await shortenScreenshot(longLink);
     return shortLink;
-  } 
-    const shortLink = await shortenNormal(longLink);
-    return shortLink;
-  
-}
+  }
+  const shortLink = await shortenNormal(longLink);
+  return shortLink;
+};
 
 const shortenURL = async (longLink) => {
-  const shortLink = await whatDomain(longLink)
+  const shortLink = await whatDomain(longLink);
   replaceHTTP(shortLink);
   clipboardy.writeSync(shortLink);
   return shortLink;
