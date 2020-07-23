@@ -17,7 +17,8 @@
     "func-names": "off",
     "class-methods-use-this": "warn",
     "import/no-extraneous-dependencies": "warn",
-    "consistent-return": "off"
+    "consistent-return": "off",
+    "no-else-return": "warn"
   },
   "parserOptions": {
     "sourceType": "module"
