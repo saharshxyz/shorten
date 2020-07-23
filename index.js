@@ -25,7 +25,7 @@ const shorten = async (url, subDomain) => {
 };
 
 const shortenURL = async url => {
-	let shortLink = new URL(await shorten(url, url.hostname === "cln.sh" ? "sc" : "go"));
+	const shortLink = new URL(await shorten(url, url.hostname === "cln.sh" ? "sc" : "go"));
 	if (shortLink.protocol === "http:") shortLink.protocol = "https:";
 	const shortUrl = shortLink.toString();
 	clipboardy.writeSync(shortUrl);
