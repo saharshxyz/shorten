@@ -1,9 +1,8 @@
-const dotenv = require("dotenv");
 const fetch = require("node-fetch");
 const clipboardy = require("clipboardy");
 const applescript = require("applescript");
 
-dotenv.config();
+require("dotenv").config();
 
 const shorten = async (url, subDomain) => {
   try {
