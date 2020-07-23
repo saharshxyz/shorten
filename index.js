@@ -35,7 +35,9 @@ const shortenURL = async (url) => {
 };
 
 const run = async (longLink) => {
-  if (!longLink.match(/^https?:\/\//)) longLink = `http://${longLink}`;
+  if (!longLink.match(/^https?:\/\//)) {
+    longLink = `http://${longLink}`;
+  }
   let notification;
   try {
     const url = new URL(longLink);
