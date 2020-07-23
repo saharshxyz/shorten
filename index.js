@@ -5,6 +5,13 @@ const applescript = require("applescript");
 require("dotenv").config();
 
 const shorten = async (url, subDomain) => {
+  let apiKEY;
+  if (subDomain == "sc") {
+apiKEY = process.env.KEY;
+  } else if (subDomain == "go"){
+    apiKEY = process.env.KEY_2;
+  }
+  
   try {
     const response = await fetch("https://kutt.it/api/v2/links", {
       method: "POST",
@@ -15,7 +22,7 @@ const shorten = async (url, subDomain) => {
       }),
       headers: {
         "content-type": "application/json",
-        "X-API-KEY": process.env.KEY,
+        "X-API-KEY": apiKEY,
       },
     });
     return (await response.json()).link;
