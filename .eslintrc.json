@@ -17,13 +17,8 @@
     "func-names": "off",
     "class-methods-use-this": "warn",
     "import/no-extraneous-dependencies": "warn",
-<<<<<<< HEAD
     "consistent-return": "off",
-    "no-else-return": "warn",
     "no-param-reassign": "warn"
-=======
-    "consistent-return": "off"
->>>>>>> parent of fa25559... 🔧 config: update rules "no-else-return" to warn
   },
   "parserOptions": {
     "sourceType": "module"
