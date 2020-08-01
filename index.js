@@ -7,9 +7,9 @@ require("dotenv").config();
 const shorten = async (url, subDomain) => {
   let apiKEY;
   if (subDomain === "sc") {
-    apiKEY = process.env.KEY;
+    apiKEY = process.env.KEY_SC;
   } else if (subDomain === "go") {
-    apiKEY = process.env.KEY_2;
+    apiKEY = process.env.KEY_SC;
   }
 
   try {
