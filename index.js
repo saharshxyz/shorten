@@ -9,7 +9,7 @@ const shorten = async (url, subDomain) => {
   if (subDomain === "sc") {
     apiKEY = process.env.KEY_SC;
   } else if (subDomain === "go") {
-    apiKEY = process.env.KEY_SC;
+    apiKEY = process.env.KEY_GO;
   }
 
   try {
